@@ -1,3 +1,6 @@
 streamlit
 web3
 requests
+qrcode
+Pillow
+

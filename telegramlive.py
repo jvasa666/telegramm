@@ -10,7 +10,7 @@ from PIL import Image
 ETH_WALLET = "0x5036dbcEEfae0a7429e64467222e1E259819c7C7"
 SOLANA_WALLET = "TODO"  # Placeholder for future Phantom/Solana integration
 BUYMECOFFEE = "https://coff.ee/xenotech"
-INFURA = "https://mainnet.infura.io/v3/20a32c9c56174317ba15f92214fecff4"
+INFURA = "https://ethereum.publicnode.com"
 TELEGRAM_TOKEN = "8089393098:AAGwE6cnV8DGOmKxU2TnhyoZOHIPm3kEDUU"
 CHAT_ID = "7139092166"
 w3 = Web3(Web3.HTTPProvider(INFURA))

@@ -12,7 +12,7 @@ ETH_WALLET = "0x5036dbcEEfae0a7429e64467222e1E259819c7C7"
 BUYMECOFFEE_URL = "https://coff.ee/xenotech"
 TELEGRAM_TOKEN = "8089393098:AAGwE6cnV8DGOmKxU2TnhyoZOHIPm3kEDUU"
 CHAT_ID = "7139092166"
-RPC_URL = "https://rpc.ankr.com/eth"  # ✅ No API key required
+RPC_URL = "https://cloudflare-eth.com"  # ✅ No API key required
 w3 = Web3(Web3.HTTPProvider(RPC_URL))
 
 st.set_page_config(page_title="☄️ XenoDrop Live", layout="centered")
@@ -68,12 +68,12 @@ def hourly_broadcast():
         message = f"""🚀 XenoDrop Live!
 💸 Wallet: {ETH_WALLET}
 🪙 Balance: {eth} ETH
-📡 Stream: https://telegramm.streamlit.app/
+📡 Live Feed: https://xenodrop.streamlit.app/
 ☕ Tip: {BUYMECOFFEE_URL}
 🛰️ Ping time: {now}"""
         if message != last_sent:
             send_telegram(message)
             last_sent = message
-        time.sleep(3600)  # hourly
+        time.sleep(3600)  # every hour
 
 threading.Thread(target=hourly_broadcast, daemon=True).start()
